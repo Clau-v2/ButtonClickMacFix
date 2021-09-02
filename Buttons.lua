@@ -67,6 +67,17 @@ local buttonfunctions = {
 
         vu:Button2Up(Vector2.new(args))
 
+    end,
+    ["mousemoveabs"] = function(args)
+    if not args and type(args) ~= 'number' then
+        args = 0,0
+        if type(args) ~= 'number' then
+            warn('arguments for mousemoveabs is nil setting to 0,0.')
+            end
+        end
+
+        vu:MoveMouse(Vector2.new(args))
+
     end
 }
 
